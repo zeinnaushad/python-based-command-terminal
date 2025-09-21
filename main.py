@@ -14,8 +14,6 @@ from datetime import datetime
 if sys.platform == 'win32':
     try:
         import pyreadline as readline
-        # pyreadline does NOT support set_completer or get_line_buffer
-        # So we disable tab completion on Windows
         readline = None
     except ImportError:
         print("pyreadline is required on Windows for command history and tab completion.")
